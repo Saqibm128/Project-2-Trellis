@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+<head>
+  <meta charset="UTF-8">
+  <title>P2 - Housing Data</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <h1 class='text-primary text-center'>X-Axis</h1>
+
+  <div class='row'>
+    <div id="X_choice" class='col-xl-12'>
+      <div class="btn-group center-block text-center x_buttons" data-toggle="buttons">
+        <label class="btn btn-primary" value="price">
+        <input type="radio" name="x_labels" id="option1" > Price (USD)
+      </label>
+        <label class="btn btn-primary active" value="year_built">
+        <input type="radio" name="x_labels" id="option2" > Year Built
+      </label>
+        <label class="btn btn-primary" value="sqft">
+        <input type="radio" name="x_labels" id="option3" > Square Feet
+      </label>
+        <label class="btn btn-primary" value="price_per_sqft">
+        <input type="radio" name="x_labels" id="option4" > Price per Square Feet (USD)
+      </label>
+        <label class="btn btn-primary" value="beds">
+        <input type="radio" name="x_labels" id="beds"> Number of Beds
+      </label>
+        <label class="btn btn-primary" value="bath">
+        <input type="radio" name="x_labels" id="option4"> Number of Baths
+      </label>
+      </div>
+    </div>
+  </div>
+  <h1 class='text-primary text-center'>Y-Axis</h1>
+  <div class="row">
+    <div id="Y_choice" class='col-xl-12'>
+      <div class="btn-group center-block text-center y_buttons" data-toggle="buttons">
+        <label class="btn btn-primary" value="price">
+        <input type="radio" name="y_labels" id="option1" > Price (USD)
+      </label>
+        <label class="btn btn-primary" value="year_built">
+        <input type="radio" name="y_labels" id="option2"> Year Built
+      </label>
+        <label class="btn btn-primary" value="sqft">
+        <input type="radio" name="y_labels" id="option3"> Square Feet
+      </label>
+        <label class="btn btn-primary active" value="price_per_sqft">
+        <input type="radio" name="y_labels" id="option4"> Price per Square Feet (USD)
+      </label>
+        <label class="btn btn-primary" value="beds">
+        <input type="radio" name="y_labels" id="beds"> Number of Beds
+      </label>
+        <label class="btn btn-primary" value="bath">
+        <input type="radio" name="y_labels" id="option4"> Number of Baths
+      </label>
+      </div>
+    </div>
+  </div>
+  <div id="main">
+    <svg width="700" height="700" style="border: 1px solid #777;">
+            <g class='legend' transform="translate(20, 20)">
+                <g class="less_than">
+                    <rect height="10" width="10" style="fill: #499936;"/>
+                    <text x="14" dy="0.7em"> ≤ 2 bedrooms</text>
+                </g clas="greater_than">
+                <g transform="translate(110)">
+                    <rect height="10" width="10" style="fill: #2e5d90;"/>
+                    <text x="14" dy="0.7em"> > 2 bedrooms</text>
+                </g>
+            </g>
+        </svg>
+  </div>
+</body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="./js/main.js"></script>
+
+</html>
